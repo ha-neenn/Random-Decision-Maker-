@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Random Decision Maker</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <main class="app">
+      <header class="header">
+        <div class="top-bar">
+          <span class="eyebrow" id="eyebrow">A LITTLE HELP DECIDING</span>
+
+          <button id="languageButton" class="language-button" type="button">
+            English
+          </button>
+        </div>
+
+        <h1 id="title">Random Decision Maker</h1>
+        <p id="subtitle">Can't decide? Let the wheel choose for you!</p>
+      </header>
+
+      <section class="workspace">
+        <div class="wheel-panel">
+          <div class="wheel-wrap" id="wheelWrap">
+            <span class="pointer"></span>
+
+            <canvas
+              id="wheel"
+              width="500"
+              height="500"
+              aria-label="Wheel of choices"
+            ></canvas>
+
+            <div id="wheelLabels" class="wheel-labels"></div>
+          </div>
+
+          <button id="spinButton" class="spin-button" type="button">
+            Spin the wheel
+          </button>
+
+          <p id="result" class="result" aria-live="polite">
+            Your result will appear here
+          </p>
+        </div>
+
+        <div class="choices-panel">
+          <div class="panel-heading">
+            <div>
+              <h2 id="choicesTitle">Your choices</h2>
+              <p id="choicesSubtitle">Add your options and let fate decide.</p>
+            </div>
+
+            <span id="choiceCount" class="count">0 choices</span>
+          </div>
+
+          <form id="choiceForm" class="add-form">
+            <input
+              id="choiceInput"
+              type="text"
+              maxlength="50"
+              placeholder="Enter a choice..."
+              autocomplete="off"
+              aria-label="Enter a choice"
+              dir="auto"
+            />
+
+            <button
+              id="addButton"
+              class="add-button"
+              type="submit"
+              aria-label="Add choice"
+            >
+              +
+            </button>
+          </form>
+
+          <p id="message" class="message" aria-live="polite"></p>
+
+          <ul id="choicesList" class="choices-list"></ul>
+
+          <div class="panel-footer">
+            <span id="footerNote" class="small-note">
+              Make room for a little surprise.
+            </span>
+
+            <button id="resetButton" class="reset-button" type="button">
+              Clear all
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span id="footerText">Made for the little decisions in life</span> ♡
+      </footer>
+    </main>
+  </body>
+</html>
